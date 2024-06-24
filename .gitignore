@@ -3,3 +3,4 @@ images
 fonts
 output
 venv_38
+src/__pycache__
