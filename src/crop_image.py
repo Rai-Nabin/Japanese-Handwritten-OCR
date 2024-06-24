@@ -4,21 +4,6 @@ import numpy as np
 class CropImage:
 
     @staticmethod
-    def sort_bounding_boxes(bounding_boxes):
-        """Takes first point from each bounding boxes. Then it sorts y-coordinates and if two points have same y-cordinates it looks for x-coordinates.
-
-        Args:
-            bounding_boxes (list): Bounding boxes coordinates of text.
-
-        Returns:
-            list: [[[544.0, 261.0], [1935.0, 226.0], [1938.0, 352.0], [548.0, 387.0]], ...]
-        """
-        sorted_bounding_boxes = sorted(
-            bounding_boxes, key=lambda k: (k[:][0][1], k[:][0][0]))
-
-        return sorted_bounding_boxes
-
-    @staticmethod
     def crop_image(image, bounding_boxes, path_to_save):
         """Crops bounding boxes from the image.
 
@@ -51,11 +36,6 @@ class CropImage:
                                         rectangle[3]+offset, rectangle[0]-offset: rectangle[0] + rectangle[2] + offset]
 
             cv.imwrite(f'{path_to_save}/crop_{idx}.jpg', cropped_image)
-
-    @staticmethod
-    def sort_bounding_boxes_and_crop_image(image, bounding_boxes, path_to_save):
-        sorted_bounding_boxes = CropImage.sort_bounding_boxes(bounding_boxes)
-        CropImage.crop_image(image, sorted_bounding_boxes, path_to_save)
 
 
             
