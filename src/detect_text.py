@@ -54,6 +54,6 @@ class TextDetection:
             coordinates = np.int0(cv.boxPoints(rectangular_box))
             cv.drawContours(image, [coordinates], 0, (0, 0, 255), 3, cv.LINE_AA)
             cv.putText(image, str(index + 1), (x + w // 4, y + h // 4),
-                       cv.FONT_HERSHEY_COMPLEX_SMALL, 3, (0, 0, 0), 3, cv.LINE_AA)
+                       cv.FONT_HERSHEY_COMPLEX_SMALL, 2, (0, 0, 0), 2, cv.LINE_AA)
             cv.imwrite(output_image_path, image)
 
