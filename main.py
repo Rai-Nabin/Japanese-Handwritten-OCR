@@ -42,7 +42,6 @@ def main():
 
     text_detection = TextDetection(det_model_dir='model/det_model/ch_ppocr_server_v2.0_det_infer/')
     text_recognition = TextRecognition('model/handwritten-japanese-recognition-0001/FP16/handwritten-japanese-recognition-0001')
-    # post_processing = PostProcessing()
 
     image = cv.imread(INPUT_IMAGE_PATH)
     # show_image(image, "Input Image")
