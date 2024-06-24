@@ -22,6 +22,8 @@ pip install -r requirements.txt
 ```bash
 python main.py japanese-handwriting-images/image-01.jpeg
 ```
+### Demo
+![Demo: Text Detection to Text Recognition](./demo.png)
 
 ### References
 - [PaddleOcr](https://github.com/PaddlePaddle/PaddleOCR/blob/main/README_en.md)
